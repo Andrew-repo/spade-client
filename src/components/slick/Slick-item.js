@@ -38,7 +38,7 @@ const SlickItem = ({ imgPath, name, id, slug, forSlick }) => {
     <Link to={`/landingPage/${slug}/${id}`}>
       <div
         className="slick-item-custom"
-        style={{ height: "300px", position: "relative" }}
+        style={{ height: "400px", position: "relative" }}
       >
         <div
           style={{
