@@ -320,4 +320,6 @@ body {
 .card-container-custom {
   padding: 1rem;
   box-shadow: 10px;
+  border: solid 1px;
+  border-radius: 10px;
 }

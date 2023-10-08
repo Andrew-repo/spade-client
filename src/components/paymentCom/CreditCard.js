@@ -22,7 +22,7 @@ const CreditCard = () => {
     //   </Col>
     // </Row>
     <div className="card-container-custom w-75">
-      <CardElement />
+      <CardElement options={{ hidePostalCode: true }} />
     </div>
   );
 };
