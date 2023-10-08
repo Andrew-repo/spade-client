@@ -52,6 +52,7 @@ const Home = () => {
                     process.env.REACT_APP_CMS + trending?.thumbnail?.slice(10)
                   }
                   className="w-100"
+                  height={200}
                 />
               </div>
               <div>
@@ -62,40 +63,64 @@ const Home = () => {
           </Col>
           <Col md>
             <div className="option-card w-100 shadow rounded p-3">
-              <h4>Trending </h4>
+              <h4>Favourite </h4>
               <div className="w-100">
-                <img src={image} className="w-100" />
+                <img
+                  src={
+                    process.env.REACT_APP_CMS +
+                    products[0]?.thumbnail?.slice(10)
+                  }
+                  className="w-100"
+                  height={200}
+                />
               </div>
               <div>
-                <p>Description</p>
+                <p>{products[0]?.name}</p>
+                <p>${products[0]?.price}</p>
               </div>
             </div>
           </Col>
           <Col md>
             <div className="option-card w-100 shadow rounded p-3 ">
-              <h4>Trending </h4>
+              <h4>Hot </h4>
               <div className="w-100">
-                <img src={image} className="w-100" />
+                <img
+                  src={
+                    process.env.REACT_APP_CMS +
+                    products[1]?.thumbnail?.slice(10)
+                  }
+                  className="w-100 "
+                  height={200}
+                />
               </div>
               <div>
-                <p>Description</p>
+                <p>{products[1]?.name}</p>
+                <p>${products[1]?.price}</p>
               </div>
             </div>
           </Col>
           <Col md>
             <div className="option-card w-100 shadow rounded p-3 ">
-              <h4>Trending </h4>
+              <h4>New </h4>
               <div className="w-100">
-                <img src={image} className="w-100" />
+                <img
+                  src={
+                    process.env.REACT_APP_CMS +
+                    products[2]?.thumbnail?.slice(10)
+                  }
+                  className="w-100"
+                  height={200}
+                />
               </div>
               <div>
-                <p>Description</p>
+                <p>{products[2]?.name}</p>
+                <p>${products[2]?.price}</p>
               </div>
             </div>
           </Col>
         </Row>
       </div>
-      <HomeCarousel />
+      {/* <HomeCarousel /> */}
       <div
         className="w-100 pt-2 slick-container"
         style={{
@@ -105,7 +130,7 @@ const Home = () => {
         }}
       >
         <CustomSlick title="Categories" data={category} />
-        <CustomSlick title="New Items" data={items.slice(0, 7)} />
+        <CustomSlick title="New Products" data={items.slice(0, 7)} />
       </div>
       <div
         style={{

@@ -33,7 +33,7 @@ const Category = () => {
         <div className="w-100 h-100 item-cat-container">
           <Row className="w-100">
             {items?.map((item, index) => (
-              <Col lg="3">
+              <Col lg="3" className="mt-3">
                 <ItemBox key={index} {...item} catSlug={slug} catId={_id} />
               </Col>
             ))}

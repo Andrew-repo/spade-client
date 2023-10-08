@@ -4,7 +4,10 @@ import Home from "./pages/home/Home";
 import Category from "./pages/category/Category";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { getAllCatAction } from "./components/categories/categoryAction";
+import {
+  getAllCatAction,
+  getProductsAction,
+} from "./components/categories/categoryAction";
 import LandingPage from "./pages/category/LandingPage";
 import Cart from "./pages/cart/Cart";
 import Signup from "./pages/signup/Signup";
@@ -15,6 +18,7 @@ import Checkout from "./pages/checkout/Checkout";
 import { autoLogin } from "./components/signupComponent/userAction";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
+import Products from "./pages/products/Products";
 
 const stripePromise = loadStripe(
   "pk_test_51LdBFlJyhE6wVt3HGo1BIm2BB8kSDr9lZcE9ahEQjcOLKyZiPfNGKauPsr3dVBh5JSZpK0uXEgKTo0MMLxDDCUrY00sbLa2hoa"
@@ -27,6 +31,7 @@ function App() {
     dispatch(getAllCatAction());
   }, [dispatch]);
   useEffect(() => {
+    dispatch(getProductsAction());
     dispatch(autoLogin());
   }, []);
   return (
@@ -43,6 +48,7 @@ function App() {
             </PrivateRouter>
           }
         />
+        <Route path="/products" element={<Products />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/account-verification" element={<VerificationPage />} />

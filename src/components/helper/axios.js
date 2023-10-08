@@ -50,6 +50,7 @@ const axiosExcecutor = async ({
         return axiosExcecutor({
           method,
           url,
+          obj,
           isPrivate,
           refreshToken,
         });

@@ -11,7 +11,7 @@ const HeroSection = () => {
         <p style={{ fontSize: "2rem", fontWeight: "800" }}>
           Limited edition offer
         </p>
-        <Link to="/cart">
+        <Link to="/products" className="nav-link">
           <div
             style={{ padding: "1rem", fontSize: "2rem", fontWeight: "800" }}
             className="rounded"

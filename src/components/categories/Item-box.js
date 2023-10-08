@@ -46,7 +46,7 @@ const ItemBox = ({ thumbnail, name, price, qty, _id, slug }) => {
   }, [thumbnail, qty]);
   return (
     <>
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 345, height: 600, marginTop: 10 }}>
         <Link to={`/landingPage/${slug}/${_id}`} className="nav-link">
           <CardActionArea>
             <CardMedia
